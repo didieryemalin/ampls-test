@@ -1,0 +1,12 @@
+name: applicationInsights-ampls-lab
+services:
+  api:
+    project: ./src/functionapp
+    language: dotnet
+    host: function
+infra:
+    provider: bicep
+    path: ./infra
+    module: main
+pipeline:
+    provider: "github"
